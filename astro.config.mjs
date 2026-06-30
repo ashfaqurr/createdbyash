@@ -1,6 +1,10 @@
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
 
 export default defineConfig({
-  // Ensure this is set to '/' for Cloudflare Pages
-  base: '/', 
+  integrations: [react()],
+  outDir: 'dist',
+  build: {
+    format: 'directory'
+  }
 });
