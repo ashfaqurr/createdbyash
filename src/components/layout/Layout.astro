@@ -1,0 +1,15 @@
+---
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
+import Cursor from '../components/cursor/Cursor'; // Assuming you kept this
+---
+<html lang="en">
+  <body className="bg-black text-white selection:bg-white selection:text-black">
+    <Cursor client:load />
+    <Header client:load />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
